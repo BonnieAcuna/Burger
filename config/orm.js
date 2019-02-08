@@ -33,10 +33,12 @@ const orm = {
 
     updateOne: function(table, condition, cb) {
         let queryString = "UPDATE " + table;
-        queryString += "SET";
-        queryString += "WHERE";
+        queryString += " SET ";
+        queryString += "devoured=true ";
+        queryString += "WHERE ";
         queryString += condition;
-
+        //UPDATE burgers SET devoured=true WHERE id=1
+        console.log(queryString)
         connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
