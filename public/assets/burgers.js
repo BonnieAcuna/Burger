@@ -23,8 +23,8 @@ $(function () {
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
 
-        const newBurger = {
-            burger_name: $("#bur").val().trim(),
+        let newBurger = {
+            name: $("#bur").val().trim(),
             devoured: $("[name=devoured]:checked").val().trim()
         };
 
@@ -32,7 +32,7 @@ $(function () {
             type: "POST",
             data: newBurger
         }).then(
-            function () {
+            function() {
                 console.log("Created new burger");
                 location.reload();
             }

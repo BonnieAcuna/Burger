@@ -1,6 +1,30 @@
 const connection = require("../config/connection.js");
 
-const orm = {
+function printQuestionMarks(num){
+    let arr = [];
+
+    for(let i = 0; i < num; i++){
+        arr.push("?");
+    }
+    return arr.toString();
+}
+
+function objToSql(ob){
+    let arr = [];
+
+    for (let key in ob){
+        let value = ob[key];
+        if(Object.hasOwnProperty.call(ob, key)){
+            if(typeof value === "string" && value.indexOf(" ") >= 0){
+                value = "'" + value + "'";
+            }
+            arr.push(key + "=" + value);
+        }
+        return arr.toString();
+    }
+}
+
+let orm = {
     selectAll: function(tableInput, cb) {
         let queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function(err, result) {
@@ -18,6 +42,7 @@ const orm = {
         queryString += cols.toString();
         queryString += " )";
         queryString += "VALUES (";
+        queryString += printQuestionMarks(val.length);
         queryString += ") ";
 
         console.log(queryString);
@@ -31,10 +56,10 @@ const orm = {
         })
     },
 
-    updateOne: function(table, condition, cb) {
+    updateOne: function(table, objColVals, condition, cb) {
         let queryString = "UPDATE " + table;
         queryString += " SET ";
-        queryString += "devoured=true ";
+        queryString += objToSql(objColVals);
         queryString += "WHERE ";
         queryString += condition;
         //UPDATE burgers SET devoured=true WHERE id=1
