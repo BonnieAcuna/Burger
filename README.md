@@ -1,3 +1,5 @@
 # Getting Started
 
-### Programs Installed
+### Programs Installed:
+  * Express
+  * MySQL
