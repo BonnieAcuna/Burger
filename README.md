@@ -1,3 +1,3 @@
-# getting Started
+# Getting Started
 
-## Programs Installed
+### Programs Installed
