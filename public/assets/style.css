@@ -1,4 +1,51 @@
 body {
-    background-color: rgb(243, 223, 42);
+    background-image: url("../assets/images/hamburger.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+h1 {
+    font-size: 60px;
+    margin-left: 20%;
+    color: white;
+}
+
+h2 {
+    font-size: 36px;
+    margin-left: 20%;
+    color: white;
+}
+
+.form-group {
+    margin-left: 17%;
+    color: white;
+}
+
+.title {
+    margin-left: 5%;
+    margin-top: 5%;
+    display: inline-block;
+}
+
+
+.list {
+    margin-left: 3%;
+    color: white;
+    display: inline-block;
+    margin-top: 10%;
+    font-size: 24px;
+}
+
+/* .devoured-title {
+    margin-left: 40%;
+    
+} */
+
+/* .devoured {
+    margin-left: 40%;
+    color: white;
+} */
+
+
 
