@@ -17,8 +17,8 @@ const burger = {
 
     
     //condition shoudl be id
-    updateOne: function( condition, cb) {
-        orm.updateOne("burgers", condition, function(res) {
+    updateOne: function( val, condition, cb) {
+        orm.updateOne("burgers", val, condition, function(res) {
             cb(res);
         });
     }

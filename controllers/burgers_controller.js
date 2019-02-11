@@ -29,16 +29,16 @@ router.post("/api/burger", function(req, res) {
 
 
 router.put("/api/burger/:id", function(req, res) {
-    const condition = "id=" + req.params.id;
-    console.log("condition", condition);
+    let condition = "id = " + req.params.id;
+    // console.log("condition", condition);
 
     burger.updateOne({
         devoured: req.body.devoured
-       },  condition, function(result) {
-        if (result.changedRows == 0) {
+       }, condition, function(result) {
+        if (result.changedRows === 0) {
             return res.status(404).end();
         } else {
-            res.redirect('/');
+            res.status(200).end();
         }
     });
 });
