@@ -15,9 +15,9 @@
   * The server.js requires express, method override, express-handlebars and the connection.js file.  It uses the routes and allows the app to listen on the localhost + port.
   
  
-### How to use 
+# How to use 
 
   * When the user goes to the page, some burgers will already show in the burgers section and one burger will already show in the devoured section.  The burgers in the burger section will have a devour button next to them and the user can click on those buttons to devour the burger and the burger will move to the devoured section.  The user can also input a new burger into the form and add the new burger.  The new burger will move into burgers section will a devour button next to it.
   
 ### Updated Portfolio
-[Updated Portfolio]
+[Portfolio](https://bonnieacuna.github.io/Updated-Portfolio/)-Updated Portfolio
