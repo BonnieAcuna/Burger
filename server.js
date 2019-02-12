@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const methodOverride = require("method-override");
 const PORT = process.env.PORT || 8080;
