@@ -40,7 +40,7 @@ let orm = {
 
         queryString += " (";
         queryString += cols.toString();
-        queryString += " )";
+        queryString += ") ";
         queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
