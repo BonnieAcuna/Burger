@@ -60,7 +60,7 @@ let orm = {
         let queryString = "UPDATE " + table;
         queryString += " SET ";
         queryString += objToSql(objColVals);
-        queryString += "WHERE ";
+        queryString += " WHERE ";
         queryString += condition;
         //UPDATE burgers SET devoured=true WHERE id=1
         console.log(queryString)
