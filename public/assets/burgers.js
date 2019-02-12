@@ -22,7 +22,7 @@ $(function () {
 
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
-
+        console.log("Running script")
         let newBurger = {
             burger_name: $("#bur").val().trim(),
             devoured: 0
